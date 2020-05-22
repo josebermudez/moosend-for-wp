@@ -297,19 +297,82 @@ class Moosend_For_Wp_Admin {
 
 
 	public function include_partial($form_id){
-		include('partials/fields/form-template.php');
+		include $this->wcpt_get_template('form-template.php', [], 'partials/fields/');
 	}
 
 	//create shortcode for every-entry
 	public function register_shortcodes($atts) {
+
 		$a = shortcode_atts(array(
 			'id' => intval(0)
 			),$atts);
+		$this->include_partial($a['id']);	
 		ob_start();
-		$this->include_partial($a['id']);
+		
 		$partial = ob_get_contents();
 		ob_end_clean();
 		return $partial;
+	}
+	
+	/**
+	 * Locate template.
+	 *
+	 * Locate the called template.
+	 * Search Order:
+	 * 1. /themes/theme/$template_name
+	 * 2. /plugins/moosend/templates/$template_name.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param 	string 	$template_name			Template to load.
+	 * @param 	string 	$string $template_path	Path to templates.
+	 * @param 	string	$default_path			Default path to template files.
+	 * @return 	string 							Path to the template file.
+	 */
+	private function wcpt_locate_template( $template_name, $template_path = '', $default_path = '' ) {
+		$template_route = $template_path . $template_name;
+
+		// Search template file in theme folder.
+		$template = locate_template([
+			$template_route
+		]);
+		
+
+		// Set default plugin templates path.
+		if ( !$template ) {
+			$template = $template_route;
+		}
+
+
+		return apply_filters( 'wcpt_locate_template', $template, $template_name, $template_path, $default_path );
+
+	}
+	
+	
+	/**
+	 * Get template.
+	 *
+	 * Search for the template and include the file.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @see wcpt_locate_template()
+	 *
+	 * @param string 	$template_name			Template to load.
+	 * @param array 	$args					Args passed for the template file.
+	 * @param string 	$string $template_path	Path to templates.
+	 * @param string	$default_path			Default path to template files.
+	 */
+	private function wcpt_get_template( $template_name, $args = [], $tempate_path = '', $default_path = '' ) {
+
+		if ( is_array( $args ) && isset( $args ) ) {
+			extract( $args );
+		}
+
+		$template_file = $this->wcpt_locate_template( $template_name, $tempate_path, $default_path );
+
+		return $template_file;
+
 	}
 
 	public function is_valid_api($key){
