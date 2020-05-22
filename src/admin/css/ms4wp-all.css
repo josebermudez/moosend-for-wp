@@ -1,0 +1,20 @@
+/*
+* General
+*/
+
+.shortcode input[type="text"]::-moz-selection { 
+    background: #5ccdde;
+}
+
+.shortcode input[type="text"]::selection{ 
+    background: #5ccdde;
+}
+
+.shortcode input[type="text"] {
+    border: none;
+}
+
+.shortcode input[type="text"]:focus {
+    border: 1px solid #5ccdde;
+    border-radius: 3px;
+}

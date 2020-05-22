@@ -1,0 +1,77 @@
+/* General */
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="tel"],
+.form-table input[type="url"],
+.form-table input[type="date"],
+.form-table input[type="number"],
+.form-table textarea,
+.form-table option,
+.form-table select {
+    border-radius: 3px;
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    box-sizing:border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.form-table input[type="text"]:focus,
+.form-table input[type="email"]:focus,
+.form-table input[type="tel"]:focus,
+.form-table input[type="url"]:focus,
+.form-table input[type="date"]:focus,
+.form-table input[type="number"]:focus,
+.form-table textarea:focus,
+.form-table select:focus {
+    border-color: #5ccdde;
+}
+
+.form-table input[type="radio"]:checked:before {
+    background-color: #3ac4d7;
+}
+
+.form-table input[type=checkbox]:checked:before {
+    color: #3ac4d7;
+}
+
+
+/* Subdomain Modal */
+
+#modal-button{
+    text-transform: uppercase;
+    background: #ff6154 none repeat scroll 0 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    height: 45px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    margin: auto;
+    display: inline-block;
+    width: auto;
+}
+
+#modal {
+  display: none;
+}
+
+#user-subdomain {
+  padding: 10px;
+  margin: 10px 10px 20px 0;
+}
+
+#user-subdomain:focus {
+  border-color: #3ac4d7;
+}
+

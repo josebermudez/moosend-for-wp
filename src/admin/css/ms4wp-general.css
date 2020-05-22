@@ -1,0 +1,151 @@
+#api-key-button {
+    background: #3ac4d7;
+    border: 1px solid #3ac4d7;
+    color: #fff;
+    cursor: default;
+    height: 38px;
+    cursor: pointer;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+#api-key-button:hover{
+  -webkit-transition: background-color 1000ms;
+  -moz-transition: background-color 1000ms;
+  -o-transition: background-color 1000ms;
+  transition: background-color 1000ms;
+  background: none;
+  color: #3ac4d7;
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 1415px) {
+  #form-style > li > label + * {
+    flex: 1 0 220px;
+  }
+}
+
+@media screen and (mix-width: 286px) {
+  #form-style > li > label + * {
+    flex: 1 0 120px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #ms-registration-form {
+    margin: 0 0 0 7%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ms-registration-form {
+    margin: 0 7%;
+  }
+}
+
+
+#api-key-status {
+	color: white;
+	font-weight: bold;
+}
+
+#connected {
+  padding: 5px 10px;
+  background-color: #59d600;
+}
+
+#activation-pending {
+  padding: 5px 10px;
+	background-color: #e29e00;
+}
+
+#api-key-missing {
+  padding: 5px 10px;
+	background-color: #dd2121;
+}
+
+
+/* Sign Up Info */
+
+#sign-up-info {
+  text-align: center;
+}
+
+#ms-registration-form {
+  background: white;
+  padding: 7% 7%;
+}
+
+#ms-registration-form > h3 {
+  color: #3AC4D7;
+}
+
+#form-style li{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#form-style > li > label {
+  font-weight: 600;
+  text-align: left;
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+ 
+
+
+#form-style > li > input[type="text"],
+#form-style > li > input[type="email"],
+#form-style > li > input[type="password"] {
+  border-radius: 5px;
+}
+
+#sign-up-button-wrapper {
+  text-align: center;
+}
+
+#create-forms-wrapper {
+  text-align: left;
+}
+
+#create-your-forms {
+  height: 38px;
+}
+
+#create-your-forms, #sign-up-button {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  border: 0;
+  background: #ff6154;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;  
+}
+
+#sign-up-button:hover, #modal-button:hover{
+  -webkit-transition: background-color 500ms;
+  -moz-transition: background-color 500ms;
+  -o-transition: background-color 500ms;
+  transition: background-color 500ms;
+  background: #ff958c;
+}
+
+#form-banner img{
+  outline: 0;
+  border: 0;
+  display: block;
+  margin: auto;
+  max-width:100%;
+  max-height:100%;
+}
+
+.error {
+  color: red;
+}

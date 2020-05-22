@@ -1,0 +1,97 @@
+
+
+/* Tabs container */
+#ms-form-tabs {
+	border-bottom: 1px solid #aaa;
+	padding: 9px 15px 0 10px;
+	margin: 0;
+}
+
+#ms-form-tabs li{
+	display: inline-block;
+	list-style: none;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #aaa;
+	padding: 3px;
+	margin: 0 4px -1px;
+	background-color: #e4e4e4;
+}
+
+#ms-form-tabs li:hover {
+	background-color: #fff;
+}
+
+#ms-form-tabs li.r-tabs-state-active,
+#ms-form-tabs li.r-tabs-state-active:hover {
+	border-top: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+	border-bottom: 1px solid #f5f5f5;
+	background-color: #f1f1f1;
+}
+
+#ms-form-tabs li a {
+	padding: 6px 10px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 30px;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	color: #333;
+	text-decoration: none;
+}
+
+#ms-form-tabs li.r-tabs-state-active a{
+	color: #000;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+#ms-form-tabs li a:hover {
+	color: #000;
+}
+
+#tabs .ms-form-tabs-panel h2 {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 8px 0;
+	padding: 0;
+}
+
+#tabs .ms-form-tabs-panel {
+	border-top: none;
+	padding: 16px;
+}
+
+/* Accordion anchor */
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+	border: 1px solid #ccc;
+	margin: 0 4px -1px;
+	background-color: #e4e4e4;
+	color: #000;
+
+	display: block;
+	padding: 10px;
+
+	list-style: none;
+	text-decoration: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	line-height: 20px;
+
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+/* Active accordion anchor */
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+	color: #000;
+	border: 1px solid #ccc;
+	font-weight: bold;
+	background-color: #fff;
+	text-shadow: none;
+}
+
+/* Disabled accordion button */
+.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
+	opacity: 0.5;
+}
